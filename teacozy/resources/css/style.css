@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+
+}
+a {
+  color:seashell;
+}
+h2 {
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 18px;
+}
+h4 {font-weight: bold;}
+
+/* Header display */
+
+header {
+  display: flex;
+  /* I went back and forth from inline-block with floats to flex, which is ideal? and which did the assignment prefer?*/
+  border-bottom: 1px solid seashell;
+  height: 69px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+}
+header img {
+  margin-left: 10px;
+  height: 50px;
+}
+nav {
+  margin-right: 10px;
+}
+nav span {
+  padding-left: 15px;
+}
+
+/* Mission Display */
+
+.mission {
+  background-image: url(../images/img-mission-background.jpg);
+}
+section div {
+  padding: 7px 0px;
+  background-color: black;
+  /* margin: auto auto; Why isn't this bringing the black bar down vertically centering within container?, instead I had to use flex */
+}
+section.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 69px;
+  height: 700px;
+  width: 1200px;
+  margin: 0 auto;
+}
+/* Teas display */
+  /* I don't know how to take after the parent to offset since they are siblings so adding position:relative top: 69px; */
+section.teas {
+
+  padding-top: 50px;
+  width: 1000px;
+  margin: 80px auto 0 auto;
+}
+  .wrapteas {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+  .teaimage img {
+  height: 200px;
+  width: 300px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+/* Locations display */
+
+.locations {
+  background-image: url(../images/img-locations-background.jpg);
+  height: 500px;
+  width: 1200px;
+  margin: 0 auto;
+  z-index: 4;
+}
+.locations h2 {
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+
+.blackboxes {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  margin-right: 40px;
+  line-height: 3;
+
+}
+.container {
+  position: relative;
+  top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container div {
+  background-color: black;
+}
+section .container {
+  background: none;
+}
+/* Footers */
+
+footer {
+  height: 200px;
+}
+.copyright {
+  text-align: left;
+  position: relative;
+  left: 20px;
+  bottom: 35px;
+}
