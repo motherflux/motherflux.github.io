@@ -1,0 +1,106 @@
+/* Navigation */
+
+
+nav{
+  height: 64px;
+}
+nav.desktop {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 24px;
+  padding: 1rem 0rem;
+}
+div span {
+  font-weight: bold;
+}
+.hue {
+  color: grey;
+}
+
+nav div {
+  display: flex;
+  height: 32px;
+  align-items: center;
+}
+nav li{ display: inline;
+  padding-right: 16px;
+  }
+nav li:last-child {
+  padding-right: none;}
+
+/* Screen size Nav */
+
+nav.mobile {
+  display:none;
+}
+
+@media only screen and (max-width: 560px) {
+  nav.desktop {
+    display: none;
+  }
+  nav.mobile {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 24px;
+    padding: 1rem 0rem;
+  }
+}
+
+/* On Campus section */
+
+div.desktop {
+  width: 1200px;
+  height: auto;
+  display: flex;
+  border: solid red;
+}
+div.left {
+  width: 60%;
+  margin: 32px 24px;
+  overflow: hidden;
+}
+div.left img {
+  max-width: 100%;
+
+}
+div.right {
+  width: 40%;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display:flex;
+  }
+
+.box {
+  width: 35%;
+  height: auto;
+  overflow:hidden;
+}
+.box img {
+  width: 100%;
+  
+
+}
+.description {
+  width: 65%;
+
+}
+
+
+
+
+@media only screen and (max-width: 560px) {
+  div.desktop {
+    display: none;
+  }
+
+  .container-mobile{
+    display:flex;
+
+  }
+}
