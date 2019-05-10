@@ -1,3 +1,31 @@
+/* Universal */
+h1  {
+  padding-top: 32px;
+  font-family: 'Quattrocento', serif;
+  font-size: 1.8em;
+}
+
+h2, p {padding-bottom: 8px;}
+
+h2 {
+  font-family: 'Quattrocento', serif;
+}
+.center {
+  text-align: center;}
+
+body {
+  font-family: 'Neuton', serif;
+}
+a {
+  text-decoration: none;
+  color: #102D09;
+}
+
+a:hover {
+  color: #27C774;
+  transition: .7s ease-in-out .2s;
+}
+
 /* Navigation */
 
 
@@ -47,14 +75,99 @@ nav.mobile {
     padding: 1rem 0rem;
   }
 }
+/* Banner intro  */
+
+.bg-banner {
+  background-color:  #102D09;
+  color: white;}
+
+div.right.banner {
+  width: 40%;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 100px;
+}
+div.banner h1{
+  font-size: 2.5em;
+  line-height: 1.7em;
+}
+
+div.banner span {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3em;
+}
+
+div.right.banner p {
+
+  background-color: hsla(207, 37%, 86%, .67);
+  width 100%;
+  padding-top: 8px;
+}
+
+div.right.banner p:hover {
+  color: #102D09;
+  transition: .8s ease-in-out .4s;
+}
+i {
+  display: inline-flex;
+}
+
+/* Screen size Banner intro  */
+@media only screen and (min-width: 561px){
+.mobile-banner {
+  display:none;
+}}
+@media only screen and (max-width: 560px) {
+  div.desktop {
+    display: none;
+  }
+  .mobile-banner img {
+    max-width: 100%;
+    height: auto;
+  }
+  .mobile-banner div {
+    margin: 0px 16px 0px 16px;
+  }
+  .mobile-banner div {
+    padding-bottom: 32px;
+  }
+  .mobile-banner p {
+    background-color: hsla(207, 37%, 86%, .67);
+    width 100%;
+    padding-top: 8px;
+  }
+  .mobile-banner p:hover {
+    color: #102D09;
+    transition: .8s ease-in-out .4s;
+  }
+
+  .mobile-banner h1 {
+    padding-bottom: 32px;
+    font-size: 1.7em;
+    letter-spacing: .03em;
+    line-height: 1.4em;
+  }
+  .mobile-banner span {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.2em;
+  }
+  .mobile-banner h2 {
+    padding-bottom: 24px;
+  }
+}
 
 /* On Campus section */
 
+.bg-aqua {
+  background-color: hsla(207, 37%, 86%, .67);
+}
 div.desktop {
   width: 1200px;
   height: auto;
   display: flex;
-  border: solid red;
+  /* border */
 }
 div.left {
   width: 60%;
@@ -63,44 +176,183 @@ div.left {
 }
 div.left img {
   max-width: 100%;
-
+}
+.left h1 {
+  margin-bottom: 24px;
 }
 div.right {
   width: 40%;
   padding-left: 16px;
   display: flex;
   flex-direction: column;
+  /* border */
 }
 
 .container {
   display:flex;
+  /* border */
+  padding: 16px 0;
+  align-items: center;
   }
-
+.container:last-child {
+  background-color: hsla(207, 37%, 61%, 0.67);
+}
 .box {
   width: 35%;
   height: auto;
-  overflow:hidden;
+  overflow: hidden;
 }
+
 .box img {
   width: 100%;
-  
-
 }
 .description {
+  margin-left: 2rem;
   width: 65%;
-
 }
 
+/* Screen size campus section */
 
+.container-mobile {
+  display:none;
+}
 
 
 @media only screen and (max-width: 560px) {
   div.desktop {
     display: none;
   }
+  /* Mobile campus */
 
-  .container-mobile{
+  .container-mobile {
     display:flex;
+    flex-direction: column;
 
+    padding-bottom: 64px;
+
+  }
+  .container-mobile img {
+    max-width: 100%;
+    padding-bottom: 1.5em;
+
+  }
+  .container-mobile:last-child {
+    padding-bottom: 0;
+
+  }
+  .description {
+    margin-left: 16px;
+    }
+
+  .mobile-campus {
+    padding: 16px 16px 32px 16px;
+  }
+  }
+/* Course section */
+
+div.course {
+  /* Made a new class .course to fix margins. Having trouble figuring out where to put 72px;tried:  margin: 0 72px;} while removing 72px below, looked worse, maybe my problem with .desktop width?*/
+}
+.courses{
+  margin: 32px 72px 32px 72px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-courses {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  margin-right: 32px;
+  margin-bottom: 32px;
+  color: hsla(160, 97%, 10%, 1);
+  background-color: hsla(207, 37%, 86%, .67);
+  flex: 2 1 300px;
+}
+.container-courses img {
+  max-width: 100%;
+  padding-bottom: 16px;
+  height:auto;
+}
+.container-courses:last-child {
+}
+.description {
+  margin-left: 16px;
+  }
+
+/* Screen size courses  */
+@media only screen and (min-width: 561px){
+.mobile-courses {
+  display:none;
+}}
+@media only screen and (max-width: 560px) {
+
+  .mobile-courses {
+    padding: 16px 16px 32px 16px;
+  }
+  .mobile-courses div {
+    background-color: hsla(207, 37%, 86%, .67);
+    width 100%;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .mobile-courses h2 {
+    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+}
+
+/* Thesis section */
+video {
+  max-width: 100%;}
+div.left.thesis {
+    width: 60%;
+    margin: 0px 24px 32px 24px;
+    overflow: hidden;
+  }
+video {
+  padding-bottom: 24px;
+}
+
+/* screen size Thesis section */
+
+
+@media only screen and (max-width: 560px){
+  video {
+    margin-top: 16px;}
+  .mobile-thesis {
+  }
+
+}
+@media only screen and (min-width: 561px){
+  .mobile-thesis {
+    display: none;
+  }
+}
+
+/* Footer section */
+footer {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 24px;
+  padding-top: 16px;
+}
+
+footer div {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  padding-bottom: 16px;
+}
+footer li {
+  display: inline;
+  }
+/* Screen size Footer */
+
+@media only screen and (max-width: 560px) {
+  footer ul{
+    display: none;
   }
 }
